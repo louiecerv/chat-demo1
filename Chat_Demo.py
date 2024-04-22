@@ -7,7 +7,7 @@ from openai import OpenAI
 
 client = AsyncOpenAI(
     # This is the default and can be omitted
-    api_key=st.secrets["API_key"],
+    api_key=st.secrets["API_KEY"],
 )
 
 async def generate_response(question, context):
