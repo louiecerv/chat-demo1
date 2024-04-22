@@ -11,8 +11,8 @@ client = AsyncOpenAI(
 )
 
 async def generate_response(question, context):
-  model = "gpt-4-0125-preview"
-  #model - "gpt-3.5-turbo"
+  #model = "gpt-4-0125-preview"
+  model - "gpt-3.5-turbo"
 
   completion = await client.chat.completions.create(model=model, messages=[{"role": "user", "content": question}, {"role": "system", "content": context}])
   return completion.choices[0].message.content
